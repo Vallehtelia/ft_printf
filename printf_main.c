@@ -1,19 +1,48 @@
 #include "include/ft_printf.h"
-#include "stdio.h"
+#include <stdio.h>
 
-int main(void)
-{
-	//int a = 0;
-	//int b = 0;
-	//int real = printf("asdasd%kkckkkk");
-	int fake = ft_printf("%");
-	printf("%s", asd);
-	printf("fake %d", fake);
+int main() {
+    char c = 'A';
+    char *str = "Hello, world!";
+    void *ptr = (void *)str;
+    int d = -42;
+    unsigned int u = 42;
+    int x = 0x2a;
+    int X = 0x2A;
 
-	//a = printf("asdasd%s %p %X %10s %+d %.2f\n", "asda\0sd", NULL, 255, "test", 42, 3.14159);
-	//b = ft_printf("asdasd%s %p %X %10s %+d %.2f\n", "asda\0sd", NULL, 255, "test", 42, 3.14159);
+    // Testing %c
+    printf("Original printf: %c\n", c);
+    ft_printf("Custom ft_printf: %c\n", c);
 
-	//a = printf("asdasd%s %p %X\n", "asda\0sd", NULL, 255);
-	//b = ft_printf("asdasd%s %p %X\n", "asda\0sd", NULL, 255);
-	//printf("printf: %d ft_printf: %d\n", a, b);
+    // Testing %s
+    printf("Original printf: %s\n", str);
+    ft_printf("Custom ft_printf: %s\n", str);
+
+    // Testing %p
+    printf("Original printf: %p\n", ptr);
+    ft_printf("Custom ft_printf: %p\n", ptr);
+
+    // Testing %d and %i
+    printf("Original printf: %d\n", d);
+    ft_printf("Custom ft_printf: %d\n", d);
+    printf("Original printf: %i\n", d);
+    ft_printf("Custom ft_printf: %i\n", d);
+
+    // Testing %u
+    printf("Original printf: %u\n", u);
+    ft_printf("Custom ft_printf: %u\n", u);
+
+    // Testing %x
+    printf("Original printf: %x\n", x);
+    ft_printf("Custom ft_printf: %x\n", x);
+
+    // Testing %X
+    printf("Original printf: %X\n", X);
+    ft_printf("Custom ft_printf: %X\n", X);
+
+    // Testing %%
+    printf("Original printf: %%\n");
+    ft_printf("Custom ft_printf: %%\n");
+
+    return 0;
 }
